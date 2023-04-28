@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3106311161385738580}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1723441329399676771}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &7696859311584788492
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 6990063520202332312}
   - component: {fileID: 4405983837110752901}
   - component: {fileID: -7402562215988481614}
+  - component: {fileID: 7429153036736793517}
   m_Layer: 7
   m_Name: enemy 0
   m_TagString: Untagged
@@ -182,7 +183,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e032c38f3ea12b4a9cf6a55b13de8e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  isPlayer: 0
+  health: 40
+  score: 40
+  hitEffect: {fileID: 2437926448431262358, guid: 3cb6564d2f8e9fd419e3d23d1593560c, type: 3}
+  applyCameraShake: 0
 --- !u!114 &-7402562215988481614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,4 +200,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fbd510a1db0be844824e84b0cee7432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
+  damage: 15
+--- !u!114 &7429153036736793517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6974313234283780895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b39c2cdee6b0fa43a823b33b9c20bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 454019216843010024, guid: 4b02f35384b1826418ae261b2ff46bb6, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 5
+  baseFiringRate: 1
+  useAI: 1
+  firingRateVariance: 0.5
+  minimumFiringRate: 0.1
+  isFiring: 0

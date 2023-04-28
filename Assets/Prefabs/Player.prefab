@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: -1488858944070370761}
   - component: {fileID: -8608047013396416350}
   - component: {fileID: 30332683799493526}
+  - component: {fileID: 4376922676797078114}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -234,7 +235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e032c38f3ea12b4a9cf6a55b13de8e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   health: 50
+  score: 0
+  hitEffect: {fileID: 2437926448431262358, guid: 3cb6564d2f8e9fd419e3d23d1593560c, type: 3}
+  applyCameraShake: 1
 --- !u!114 &30332683799493526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,3 +253,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+--- !u!114 &4376922676797078114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6517260071008572142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b39c2cdee6b0fa43a823b33b9c20bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 454019216843010024, guid: 5db99cd2f8ae5ab4bba898a73e65cb3e, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 5
+  baseFiringRate: 0.2
+  useAI: 0
+  firingRateVariance: 0
+  minimumFiringRate: 0.1
+  isFiring: 0
